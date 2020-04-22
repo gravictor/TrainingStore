@@ -1,0 +1,12 @@
+﻿
+   <h1>Все смартфоны</h1>
+    <h3>@Model.PhoneCategory</h3>
+    @{ 
+        foreach (var phone in Model.AllPhones)
+        {
+            <div>
+                <h2>Модель: @phone.Name </h2>
+                <p>Цена: @phone.Price.ToString("c")</p>
+            </div>
+        }
+    }

@@ -6,7 +6,7 @@ using TrainingStore.Data.Models;
 
 namespace TrainingStore.Data.Interfaces
 {
-    interface IAllPhones
+    public interface IAllPhones
     {
         IEnumerable<Phone> phones { get; }
         IEnumerable<Phone> GetFavPhones { get; set; }

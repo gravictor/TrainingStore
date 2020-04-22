@@ -6,7 +6,7 @@ using TrainingStore.Data.Models;
 
 namespace TrainingStore.Data.Interfaces
 {
-    interface IPhonesCategory
+    public interface IPhonesCategory
     {
         IEnumerable<Category> AllCategories { get; }
     }
