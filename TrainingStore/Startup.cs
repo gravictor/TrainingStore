@@ -27,6 +27,16 @@ namespace TrainingStore
             }
 
             app.UseRouting();
+            if (env.IsProduction())
+            {
+                app.UseEndpoints(endpoints =>
+                {
+                    endpoints.MapGet("/", async context =>
+                    {
+                        await context.Response.WriteAsync("Production!");
+                    });
+                });
+            }
 
             app.UseEndpoints(endpoints =>
             {
