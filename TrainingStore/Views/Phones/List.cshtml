@@ -1,12 +1,16 @@
-﻿
-   <h1>Все смартфоны</h1>
-    <h3>@Model.PhoneCategory</h3>
-    @{ 
+﻿<h1>Все смартфоны</h1>
+<h3>@Model.PhoneCategory</h3>
+<div class="row mt-5 mb-2">
+    @{
         foreach (var phone in Model.AllPhones)
         {
-            <div>
-                <h2>Модель: @phone.Name </h2>
-                <p>Цена: @phone.Price.ToString("c")</p>
-            </div>
+    <div class="col-lg-4">
+        <img class="img-thumbnail" src="@phone.Image" alt="@phone.Name"/>
+        <h2>@phone.Name </h2>
+        <p>@phone.ShortDesc</p>
+        <p>Цена: @phone.Price.ToString("c")</p>
+        <p><a class="btn btn-warning" href ="#">Подробнее</a></p>
+    </div>
         }
     }
+</div>
