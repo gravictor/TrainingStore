@@ -9,7 +9,7 @@ namespace TrainingStore.Data.Interfaces
     public interface IAllPhones
     {
         IEnumerable<Phone> phones { get; }
-        IEnumerable<Phone> GetFavPhones { get; set; }
+        IEnumerable<Phone> GetFavPhones { get; }
         Phone GetObjectPhone(int PhoneId);
     }
 }
